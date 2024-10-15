@@ -141,6 +141,7 @@ disturbances in the reflector operation.
 
 Example: HTTP_SRV_PORT=8080
 .TP
+<<<<<<< HEAD
 .B COMMAND_PTY
 Configure a path for a pseudo tty device to send runtime commands to the
 svxreflector. The device may be defined as COMMAND_PTY=/dev/shm/reflector_ctrl.
@@ -150,6 +151,13 @@ device like this:
   echo "CFG section varname value" > /dev/shm/reflector_ctrl
   e.g.
   echo "CFG GLOBAL SQL_TIMEOUT_BLOCKTIME 60" > /dev/shm/reflector_ctrl
+=======
+.B AUTH_KEY
+Set a key used by nodes that are not configured in [USERS] section without
+defining an USER=password combination. This can be used for reflectors that
+should be open for everyone and/or a big number of clients to keep the 
+configuration effort as low as possible.
+>>>>>>> 44475dd24c3e4419f76dc9badcbab66a4291b6fc
 .
 .SS USERS and PASSWORDS sections
 .
